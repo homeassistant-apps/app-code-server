@@ -16,7 +16,7 @@ jobs:
   prepare:
     runs-on: ubuntu-latest
     outputs:
-      updater_token: ${{ steps.set-output.outputs.updater_token }}
+      token: ${{ steps.set-output.outputs.token }}
     steps:
       - name: 🔐 Load 1Password secrets
         id: load-op
