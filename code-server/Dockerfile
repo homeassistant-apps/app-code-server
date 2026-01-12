@@ -22,18 +22,18 @@ COPY code-server.extensions /etc/code-server.extensions
 
 # Setup base system
 ARG BUILD_ARCH=amd64
-ARG CODE_SERVER_VERSION="v4.107.1"
+ARG CODE_SERVER_VERSION="v4.108.0"
 ARG HA_CLI_VERSION="4.45.0"
 ARG TAILSCALE_VERSION="v1.92.5"
 ARG YQ_VERSION="v4.50.1"
 # renovate: datasource=repology depName=debian_13/build-essential-mipsen versioning=loose
 ARG build_essential_version="12.12"
 # renovate: datasource=repology depName=debian_13/locales versioning=loose
-ARG locales_version="2.41-12"
+ARG locales_version="2.41-12+deb13u1"
 # no-renovate: datasource=repology depName=debian_13/uuid-runtime versioning=loose
 ARG uuid_runtime_version="2.41-5"
 # renovate: datasource=repology depName=debian_13/gnupg versioning=loose
-ARG gnupg_version="2.4.7-21"
+ARG gnupg_version="2.4.7-21+deb13u1"
 # renovate: datasource=repology depName=debian_13/openssh versioning=loose
 ARG openssh_server_version="1:10.0p1-7"
 # renovate: datasource=repology depName=debian_13/openssh versioning=loose
@@ -65,7 +65,7 @@ RUN \
         uuid-runtime="${uuid_runtime_version}" \
         wget>=1.25.0-2 \
         zip=3.0-15 \
-        zsh=5.9-8+b14 \
+        zsh=5.9-8+b18 \
         less=668-1 \
         nano=8.4-1 \
         apt-transport-https=3.0.3 \
